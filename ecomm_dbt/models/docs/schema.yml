@@ -1,0 +1,10 @@
+# version: 2
+
+# models:
+#   - name: fct_sales
+#     description: "Daily sales aggregates for analytics and dashboards."
+#     columns:
+#       - name: order_date
+#         description: "Date when the order was placed (UTC)."
+#       - name: total_revenue
+#         description: "Total revenue for the day (sum of line totals)."

@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw_streaming_db
+    schema: public # Assuming your base tables are in the 'public' schema
+    
+    tables:
+      - name: users
+        identifier: users
+      - name: profiles
+        identifier: profiles
+      - name: subscription_plans
+        identifier: subscription_plans
+      - name: movies
+        identifier: movies
+      - name: actors
+        identifier: actors
+      - name: movie_actors
+        identifier: movie_actors
+      - name: watch_history
+        identifier: watch_history
+      - name: favorites
+        identifier: favorites
+      - name: genres
+        identifier: genres
+      - name: movie_genres
+        identifier: movie_genres

@@ -1,0 +1,12 @@
+version: 2    # Always start with version: 2 for YAML configs
+
+sources:
+  - name: raw                      # schema name in your database
+    database: ecom_db              # name of your database (Postgres DB name)
+    schema: raw                    # schema where raw tables are stored
+    tables:
+      - name: orders               # these are actual table names
+      - name: customers
+      - name: order_items
+      - name: products
+      - name: payments

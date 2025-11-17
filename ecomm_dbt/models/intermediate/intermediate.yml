@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_sales_enriched
+    description: "Intermediate joined view combining sales, orders, and users"

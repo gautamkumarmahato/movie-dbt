@@ -1,0 +1,5 @@
+version: 2
+
+macros:
+  - name: order_total_positive
+    description: "Helper macro that computes quantity * unit_price with parentheses."

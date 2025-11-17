@@ -1,0 +1,340 @@
+[0m13:57:56.634978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002206AB57290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022069FA28A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002206A63DB20>]}
+
+
+============================== 13:57:56.659530 | a73721cb-929d-47bb-b193-9f75dd631ad5 ==============================
+[0m13:57:56.659530 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:57:56.659530 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'printer_width': '80', 'invocation_command': 'dbt init my_dbt_project', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m13:57:56.706168 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\gauta\.dbt
+[0m13:57:56.713899 [debug] [MainThread]: Starter project path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\include\starter_project
+[0m13:57:56.747532 [info ] [MainThread]: 
+Your new dbt project "my_dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:57:56.747532 [info ] [MainThread]: Setting up your profile.
+[0m14:05:29.114567 [error] [MainThread]: Encountered an error:
+
+[0m14:05:29.119828 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m14:05:29.123057 [debug] [MainThread]: Command `dbt init` failed at 14:05:29.123057 after 452.77 seconds
+[0m14:05:29.123057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002206AA14260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002206BD90440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002206BF1A180>]}
+[0m14:05:29.123057 [debug] [MainThread]: Flushing usage events
+[0m14:05:43.400470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299CCF73620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299CFDE4770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299CFB58410>]}
+
+
+============================== 14:05:43.403193 | cec16e9b-b8dc-45d3-9977-edd7d3b46e9d ==============================
+[0m14:05:43.403193 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:05:43.403193 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt init my_dbt_project', 'printer_width': '80', 'target_path': 'None'}
+[0m14:05:43.450374 [info ] [MainThread]: A project called my_dbt_project already exists here.
+[0m14:05:43.452372 [debug] [MainThread]: Command `dbt init` succeeded at 14:05:43.452372 after 0.38 seconds
+[0m14:05:43.453722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299CCEE81A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299CFF41BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299CFF41D00>]}
+[0m14:05:43.454769 [debug] [MainThread]: Flushing usage events
+[0m14:05:45.537943 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:06:12.052848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264094AB350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002640BE64770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002640BA06240>]}
+
+
+============================== 14:06:12.065945 | ff9c2d09-bb3e-4681-9b8f-c8a9e5736de4 ==============================
+[0m14:06:12.065945 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:06:12.065945 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'target_path': 'None', 'cache_selected_only': 'False', 'invocation_command': 'dbt init dbt_project_test', 'log_format': 'default', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m14:06:12.130167 [debug] [MainThread]: Starter project path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\include\starter_project
+[0m14:06:12.165998 [info ] [MainThread]: 
+Your new dbt project "dbt_project_test" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:06:12.168064 [info ] [MainThread]: Setting up your profile.
+[0m14:08:53.585815 [info ] [MainThread]: Profile dbt_project_test written to C:\Users\gauta\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:08:53.587819 [debug] [MainThread]: Command `dbt init` succeeded at 14:08:53.587819 after 162.01 seconds
+[0m14:08:53.587819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002640BAF0980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002640C02B5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002640C0294C0>]}
+[0m14:08:53.587819 [debug] [MainThread]: Flushing usage events
+[0m14:08:55.842083 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:09:12.201893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251C0C76CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251C0E5AD20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251C0AA79B0>]}
+
+
+============================== 14:09:12.213041 | 86ca6d80-1ca0-4159-bb85-8b5a39e4c222 ==============================
+[0m14:09:12.213041 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:09:12.215046 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'write_json': 'True', 'invocation_command': 'dbt debug', 'printer_width': '80', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m14:09:12.259438 [info ] [MainThread]: dbt version: 1.10.13
+[0m14:09:12.259438 [info ] [MainThread]: python version: 3.12.9
+[0m14:09:12.263173 [info ] [MainThread]: python path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Scripts\python.exe
+[0m14:09:12.265179 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m14:09:12.391941 [info ] [MainThread]: Using profiles dir at C:\Users\gauta\.dbt
+[0m14:09:12.391941 [info ] [MainThread]: Using profiles.yml file at C:\Users\gauta\.dbt\profiles.yml
+[0m14:09:12.391941 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\dbt_project.yml
+[0m14:09:12.391941 [info ] [MainThread]: adapter type: postgres
+[0m14:09:12.391941 [info ] [MainThread]: adapter version: 1.9.1
+[0m14:09:12.391941 [info ] [MainThread]: Configuration:
+[0m14:09:12.391941 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:09:12.403073 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:09:12.404080 [info ] [MainThread]: Required dependencies:
+[0m14:09:12.405521 [debug] [MainThread]: Executing "git --help"
+[0m14:09:12.516254 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:09:12.516254 [debug] [MainThread]: STDERR: "b''"
+[0m14:09:12.516254 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:09:12.524614 [info ] [MainThread]: Connection:
+[0m14:09:12.525622 [info ] [MainThread]:   host: ep-still-surf-a4cbcnsx-pooler.us-east-1.aws.neon.tech
+[0m14:09:12.525622 [info ] [MainThread]:   port: 5432
+[0m14:09:12.525622 [info ] [MainThread]:   user: neondb_owner
+[0m14:09:12.529322 [info ] [MainThread]:   database: pg-omni
+[0m14:09:12.529322 [info ] [MainThread]:   schema: public
+[0m14:09:12.529322 [info ] [MainThread]:   connect_timeout: 10
+[0m14:09:12.532738 [info ] [MainThread]:   role: None
+[0m14:09:12.534804 [info ] [MainThread]:   search_path: None
+[0m14:09:12.535879 [info ] [MainThread]:   keepalives_idle: 0
+[0m14:09:12.536921 [info ] [MainThread]:   sslmode: None
+[0m14:09:12.537928 [info ] [MainThread]:   sslcert: None
+[0m14:09:12.538925 [info ] [MainThread]:   sslkey: None
+[0m14:09:12.540356 [info ] [MainThread]:   sslrootcert: None
+[0m14:09:12.541779 [info ] [MainThread]:   application_name: dbt
+[0m14:09:12.543980 [info ] [MainThread]:   retries: 1
+[0m14:09:12.546086 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m14:09:13.334129 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m14:09:13.548014 [debug] [MainThread]: Using postgres connection "debug"
+[0m14:09:13.557210 [debug] [MainThread]: On debug: select 1 as id
+[0m14:09:13.557210 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:09:13.559676 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m14:09:13.561114 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m14:09:13.562122 [debug] [MainThread]: On debug: No close available on handle
+[0m14:09:13.563128 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m14:09:13.565140 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m14:09:13.565140 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\dbt_project.yml> not found
+
+[0m14:09:13.565140 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  invalid dsn: missing "=" after "H�" in connection info string
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m14:09:13.572355 [debug] [MainThread]: Command `dbt debug` failed at 14:09:13.565140 after 1.63 seconds
+[0m14:09:13.573423 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:09:13.574482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251C0B89CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251C142F590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000251C1355DC0>]}
+[0m14:09:13.575569 [debug] [MainThread]: Flushing usage events
+[0m14:09:15.823743 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:09:52.987802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C1955B0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C1C0EBCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C1C0EAEA0>]}
+
+
+============================== 14:09:52.987802 | 97970660-2805-42ca-ace4-08ccb1eade36 ==============================
+[0m14:09:52.987802 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:09:52.987802 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'invocation_command': 'dbt init my_dbt_project', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'target_path': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m14:09:53.043585 [debug] [MainThread]: Starter project path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\include\starter_project
+[0m14:09:53.070816 [info ] [MainThread]: 
+Your new dbt project "my_dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:09:53.070816 [info ] [MainThread]: Setting up your profile.
+[0m14:11:11.330155 [info ] [MainThread]: Profile my_dbt_project written to C:\Users\gauta\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:11:11.333283 [debug] [MainThread]: Command `dbt init` succeeded at 14:11:11.333283 after 78.60 seconds
+[0m14:11:11.334279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C1C59A5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C1C59AC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022C1D8007A0>]}
+[0m14:11:11.335754 [debug] [MainThread]: Flushing usage events
+[0m14:11:13.544916 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:11:21.413037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CE83C78EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CE83A828A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CE84459A30>]}
+
+
+============================== 14:11:21.418792 | 252b9f2f-437b-40b6-9879-70fb5b2bb69f ==============================
+[0m14:11:21.418792 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:11:21.423055 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt debug', 'printer_width': '80', 'write_json': 'True'}
+[0m14:11:21.459240 [info ] [MainThread]: dbt version: 1.10.13
+[0m14:11:21.459240 [info ] [MainThread]: python version: 3.12.9
+[0m14:11:21.459240 [info ] [MainThread]: python path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Scripts\python.exe
+[0m14:11:21.459240 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m14:11:21.591600 [info ] [MainThread]: Using profiles dir at C:\Users\gauta\.dbt
+[0m14:11:21.604459 [info ] [MainThread]: Using profiles.yml file at C:\Users\gauta\.dbt\profiles.yml
+[0m14:11:21.606463 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\dbt_project.yml
+[0m14:11:21.607469 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:11:21.609861 [debug] [MainThread]: Command `dbt debug` failed at 14:11:21.608853 after 0.47 seconds
+[0m14:11:21.609861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CE80B2FCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CEFFF07A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CE8575AC00>]}
+[0m14:11:21.610870 [debug] [MainThread]: Flushing usage events
+[0m14:11:23.857956 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:25:17.060633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C71137A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C7215BCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C74836510>]}
+
+
+============================== 14:25:17.072047 | 1435d8c6-6f10-411d-882a-73418d6e5822 ==============================
+[0m14:25:17.072047 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:25:17.074042 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'target_path': 'None', 'printer_width': '80', 'no_print': 'None', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m14:25:17.120728 [info ] [MainThread]: dbt version: 1.10.13
+[0m14:25:17.122722 [info ] [MainThread]: python version: 3.12.9
+[0m14:25:17.123722 [info ] [MainThread]: python path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Scripts\python.exe
+[0m14:25:17.126228 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m14:25:17.301617 [info ] [MainThread]: Using profiles dir at C:\Users\gauta\.dbt
+[0m14:25:17.303888 [info ] [MainThread]: Using profiles.yml file at C:\Users\gauta\.dbt\profiles.yml
+[0m14:25:17.304921 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\dbt_project.yml
+[0m14:25:17.305910 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m14:25:17.308809 [debug] [MainThread]: Command `dbt debug` failed at 14:25:17.307428 after 0.56 seconds
+[0m14:25:17.309818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C74E59700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C74E5BF20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020C76BF3F80>]}
+[0m14:25:17.311843 [debug] [MainThread]: Flushing usage events
+[0m14:25:19.937478 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:26:29.658287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F400352B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F401227E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F400CAD700>]}
+
+
+============================== 14:26:29.667386 | 5ee9950a-eec7-44d0-80b9-41579ff2dc23 ==============================
+[0m14:26:29.667386 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:26:29.669336 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'invocation_command': 'dbt init my_dbt', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'write_json': 'True', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m14:26:29.724596 [debug] [MainThread]: Starter project path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\include\starter_project
+[0m14:26:29.766780 [info ] [MainThread]: 
+Your new dbt project "my_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:26:29.769306 [info ] [MainThread]: Setting up your profile.
+[0m14:28:11.155056 [info ] [MainThread]: Profile my_dbt written to C:\Users\gauta\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:28:11.157536 [debug] [MainThread]: Command `dbt init` succeeded at 14:28:11.157536 after 101.96 seconds
+[0m14:28:11.158714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F47D83BFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F400CAD700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4013F0740>]}
+[0m14:28:11.159720 [debug] [MainThread]: Flushing usage events
+[0m14:28:14.004912 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:43:18.603710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D803FEB440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D803F0C0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D806BAED20>]}
+
+
+============================== 12:43:18.603710 | 31e90474-0d1a-48ff-b449-4969abc2f593 ==============================
+[0m12:43:18.603710 [info ] [MainThread]: Running with dbt=1.10.13
+[0m12:43:18.619663 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'no_print': 'None', 'write_json': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'invocation_command': 'dbt init ecomm_dbt', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m12:43:18.680744 [debug] [MainThread]: Starter project path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\include\starter_project
+[0m12:43:18.711330 [info ] [MainThread]: 
+Your new dbt project "ecomm_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:43:18.714601 [info ] [MainThread]: Setting up your profile.
+[0m12:44:32.928802 [info ] [MainThread]: Profile ecomm_dbt written to C:\Users\gauta\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:44:32.944582 [debug] [MainThread]: Command `dbt init` succeeded at 12:44:32.944582 after 74.61 seconds
+[0m12:44:32.945586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D805F172F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D806AD53A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D808250920>]}
+[0m12:44:32.946597 [debug] [MainThread]: Flushing usage events
+[0m12:44:35.091223 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:10:14.967678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD5EFFB530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD5C5AD700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD5FE98200>]}
+
+
+============================== 14:10:14.982202 | 43bfd3ac-d327-4223-903c-23d87f951580 ==============================
+[0m14:10:14.982202 [info ] [MainThread]: Running with dbt=1.10.13
+[0m14:10:14.984247 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'use_colors': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'no_print': 'None', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'printer_width': '80', 'write_json': 'True'}
+[0m14:10:14.985320 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:10:14.987364 [debug] [MainThread]: Command `dbt run` failed at 14:10:14.987364 after 0.27 seconds
+[0m14:10:14.988378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD5FE62C30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD5CDDFE00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FD600E9D30>]}
+[0m14:10:14.989390 [debug] [MainThread]: Flushing usage events
+[0m14:10:17.292981 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:42.130243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000188497C38F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001884891D700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001884914BEC0>]}
+
+
+============================== 13:46:42.136718 | 93db962b-ce72-4c5a-8ec7-423d3b04a6eb ==============================
+[0m13:46:42.136718 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:46:42.136718 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\gauta\\.dbt', 'log_format': 'default', 'use_colors': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt init', 'printer_width': '80', 'target_path': 'None'}
+[0m13:48:02.358603 [debug] [MainThread]: Starter project path: C:\Users\gauta\OneDrive\Desktop\apps\dbt-app\.venv\Lib\site-packages\dbt\include\starter_project
+[0m13:48:02.394583 [info ] [MainThread]: 
+Your new dbt project "movies_data_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:48:02.394583 [info ] [MainThread]: Setting up your profile.
+[0m13:49:54.830362 [info ] [MainThread]: Profile movies_data_dbt written to C:\Users\gauta\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:49:54.842697 [debug] [MainThread]: Command `dbt init` succeeded at 13:49:54.830362 after 192.95 seconds
+[0m13:49:54.843730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001884BF17320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001884C45BCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001884C45BC80>]}
+[0m13:49:54.845802 [debug] [MainThread]: Flushing usage events
+[0m13:49:56.995648 [debug] [MainThread]: An error was encountered while trying to flush usage events

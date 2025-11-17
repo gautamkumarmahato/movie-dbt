@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: public_raw           # a name we choose to refer to this collection of tables
+    schema: public             # the actual schema in Postgres/Neon where the tables live
+    tables:
+      - name: orders
+      - name: customers
+      - name: order_items
+      - name: products
+      - name: payments
+      - name: users
+
+

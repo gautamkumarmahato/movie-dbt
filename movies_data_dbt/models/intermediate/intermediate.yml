@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: int_profile_movie_activity
+    description: >
+      A combined view of watch history records with associated profile and movie details. 
+      This is used as a base for the final Profile Activity Fact table.
+    columns:
+      - name: history_id
+        description: Primary key from the watch_history table.
+        tests:
+          - unique
+          - not_null
+      - name: profile_id
+        description: Foreign key linking to the Profiles dimension.
+      - name: watch_percentage
+        description: The percentage of the movie watched (progress_minutes / duration_minutes * 100).
+  
+  - name: int_movie_cast_details
+    description: >
+      Pre-aggregated list of all actors and their roles for each movie, summarizing the cast information.
+    columns:
+      - name: movie_id
+        description: Primary key for the movie.
+        tests:
+          - unique
+          - not_null
+      - name: total_cast_count
+        description: The total number of actors linked to the movie.
+      - name: full_cast_details
+        description: A concatenated string of all actors and their roles (e.g., 'Keanu Reeves (Neo), Laurence Fishburne (Morpheus)').

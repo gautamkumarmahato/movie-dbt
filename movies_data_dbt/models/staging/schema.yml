@@ -1,0 +1,145 @@
+version: 2
+
+models:
+
+  # --- STAGING: DIMENSION TABLES ---
+  - name: stg_subscription_plans
+    description: "{{ doc('stg_subscription_plans_description') }}"
+    columns:
+      - name: plan_id
+        description: "Unique ID for the subscription plan."
+        tests:
+          - unique
+          - not_null
+
+      - name: plan_name
+        description: "Name of the subscription plan."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_users
+    description: "{{ doc('stg_users_description') }}"
+    columns:
+      - name: user_id
+        description: "Unique identifier for each user."
+        tests:
+          - unique
+          - not_null
+
+      - name: email
+        description: "Normalized and cleaned user email."
+        tests:
+          - unique
+          - not_null
+
+      - name: plan_id
+        description: "Plan the user is subscribed to."
+        tests:
+          - relationships:
+              to: ref('stg_subscription_plans')
+              field: plan_id
+
+      - name: subscription_status
+        description: "User subscription status (active, inactive, cancelled)."
+        tests:
+          - accepted_values:
+              values: ['active', 'inactive', 'cancelled']
+
+  - name: stg_profiles
+    description: "{{ doc('stg_profiles_description') }}"
+    columns:
+      - name: profile_id
+        description: "Unique ID for the user profile."
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: "User to whom the profile belongs."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_users')
+              field: user_id
+
+      - name: is_kid_profile
+        description: "Whether the profile is flagged for kids."
+        tests:
+          - not_null
+
+  - name: stg_actors
+    description: "{{ doc('stg_actors_description') }}"
+    columns:
+      - name: actor_id
+        description: "Unique ID for the actor."
+        tests:
+          - unique
+          - not_null
+
+      - name: full_name
+        description: "Full actor name."
+        tests:
+          - not_null
+
+  # --- STAGING: MOVIE TABLES ---
+  - name: stg_movies
+    description: "{{ doc('stg_movies_description') }}"
+    columns:
+      - name: movie_id
+        description: "Unique identifier for the movie."
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: "Movie title."
+        tests:
+          - unique
+          - not_null
+
+      - name: duration_minutes
+        description: "Movie duration in minutes (non-negative)."
+
+  # --- STAGING: FACT / LINK TABLES ---
+  - name: stg_watch_history
+    description: "{{ doc('stg_watch_history_description') }}"
+    columns:
+      - name: history_id
+        description: "Unique ID for the watch event."
+        tests:
+          - unique
+          - not_null
+
+      - name: profile_id
+        description: "Profile that watched the movie."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_profiles')
+              field: profile_id
+
+      - name: movie_id
+        description: "Movie that was watched."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_movies')
+              field: movie_id
+
+  - name: stg_movie_actors
+    description: "{{ doc('stg_movie_actors_description') }}"
+    columns:
+      - name: movie_id
+        description: "Movie ID for the movie."
+        tests:
+          - relationships:
+              to: ref('stg_movies')
+              field: movie_id
+
+      - name: actor_id
+        description: "Actor ID for the actor appearing in the movie."
+        tests:
+          - relationships:
+              to: ref('stg_actors')
+              field: actor_id

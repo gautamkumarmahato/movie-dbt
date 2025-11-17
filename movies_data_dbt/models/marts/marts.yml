@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: mrt_user_subscriptions_dim
+    description: A dimensional table containing comprehensive details about every user and their current subscription plan.
+    columns:
+      - name: user_id
+        description: The unique identifier for the user account.
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: The user's unique email address.
+      - name: subscription_status
+        description: The current status of the subscription ('active', 'inactive', etc.).
+      - name: plan_name
+        description: The name of the user's plan (Basic, Standard, Premium).
+      - name: monthly_price
+        description: The price of the current plan.
+
+  - name: mrt_profile_activity_fact
+    description: A fact table tracking every individual viewing event, ready for aggregation like total watch time or unique streams per day.
+    columns:
+      - name: history_id
+        description: Primary key for the watch event.
+        tests:
+          - unique
+          - not_null
+      - name: watched_at
+        description: Timestamp when the viewing event occurred.
+      - name: watch_percentage
+        description: The percentage of the movie watched. Use this to determine if a movie was "completed."
+      - name: movie_id
+        description: Foreign key to the Movie Catalog dimension.
+
+  - name: mrt_movie_catalog_dim
+    description: A dimensional table containing all metadata for every movie, pre-joined with genres and cast details.
+    columns:
+      - name: movie_id
+        description: Primary key for the movie.
+        tests:
+          - unique
+          - not_null
+      - name: title
+        description: The title of the movie.
+      - name: rating
+        description: The MPAA or TV rating (e.g., 'R', 'PG-13').
+      - name: genres_list
+        description: A comma-separated list of all genres associated with the movie.
+      - name: total_cast_count
+        description: The number of actors in the movie's cast.
